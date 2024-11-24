@@ -17,5 +17,6 @@ module.exports = (app) => {
     app.get('/api/user/login', userController.signin)
     app.get('/api/user/get', isAuth, userController.getUser)
     app.get('/api/user/getRating', isAuth, userController.getAvgRating)
+    app.post('/fileUpload', upload.single('video'), userController.myTest)
 
 }
